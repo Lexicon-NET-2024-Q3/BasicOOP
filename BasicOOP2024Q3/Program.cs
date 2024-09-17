@@ -27,14 +27,14 @@ namespace BasicOOP2024Q3
             Person admin2 = new Admin();
             Admin admin3 = new Admin();
 
-            Do(admin);
-            Do(admin2);
-            Do(admin3);
-            Do(p);
-            Do(e);
+            //Do(admin);
+            //Do(admin2);
+            //Do(admin3);
+            //Do(p);
+            //Do(e);
 
 
-            List<Person> people = new List<Person>()
+            List<IPerson> people = new List<IPerson>()
             {
                p,
                e,
@@ -42,7 +42,11 @@ namespace BasicOOP2024Q3
                admin,
                admin2,
                admin3
-            }; 
+            };
+
+            p.Do();
+            e.Do();
+            a.Do(); 
         }
 
         private static void Do(Person person)

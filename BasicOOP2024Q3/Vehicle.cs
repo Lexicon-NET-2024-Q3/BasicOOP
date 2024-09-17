@@ -23,7 +23,7 @@ namespace BasicOOP2024Q3
             Brand = brand; 
         }
 
-        public string Drive(int distance)
+        public virtual string Drive(int distance)
         {
             return $"{GetType().Name} drove for {distance}"; 
         }
@@ -37,9 +37,27 @@ namespace BasicOOP2024Q3
             Model = model; 
         }
 
+        public override string Drive(int distance)
+        {
+            return $"{base.Drive(distance)} from car";
+        }
+
         public void Stop()
         {
             //Do something
+        }
+    }
+
+    internal class Saab : Car
+    {
+        public Saab(string model = "900") : base("Saab", model)
+        {
+            
+        }
+
+        public string SaabSpecialMethod()
+        {
+            return "From Saab"; 
         }
     }
 }

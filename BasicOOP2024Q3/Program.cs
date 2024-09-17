@@ -8,9 +8,49 @@ namespace BasicOOP2024Q3
             //FirstPart();
             Vehicle v = new Vehicle("Volvo");
             Car c = new Car("Saab", "93");
+            Saab s = new Saab();
+            //Console.WriteLine(v.Drive(50));
+            //Console.WriteLine(c.Drive(55));
+            //Console.WriteLine(s.Brand);
+            //Console.WriteLine(s.Model);
 
-            Console.WriteLine(v.Drive(50));
-            Console.WriteLine(c.Drive(55)); 
+            List<IDrivable> vehicles = new List<IDrivable>
+            {
+                v,
+                c,
+                s
+            };
+
+            foreach (IDrivable vehicle in vehicles)
+            {
+                Console.WriteLine(vehicle.Drive(50));
+
+                //unsafe cast
+                //Saab saab = (Saab)vehicle;
+
+                //Saab saab = vehicle as Saab;
+                //Console.WriteLine(saab.SaabSpecialMethod());
+
+                //Saab saab = vehicle as Saab;
+                //if(saab != null)
+                //{
+                //    Console.WriteLine(saab.SaabSpecialMethod());
+                //}
+
+                //if(vehicle is Saab)
+                //{
+                //    Saab saab = (Saab)vehicle;
+                //    Console.WriteLine(saab.SaabSpecialMethod());
+                //}
+
+                if(vehicle is Saab castedToSaab)
+                {
+                    Console.WriteLine(castedToSaab.SaabSpecialMethod());
+                }
+
+            }
+
+
         }
 
         private static void FirstPart()

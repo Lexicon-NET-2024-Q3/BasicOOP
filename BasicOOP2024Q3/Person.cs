@@ -19,7 +19,7 @@ namespace BasicOOP2024Q3
 
         public string Name { get; set; } = string.Empty;
 
-        public void Do()
+        public virtual void Do()
         {
             Console.WriteLine("Person do");
         }
@@ -32,10 +32,21 @@ namespace BasicOOP2024Q3
         //{
         //    Console.WriteLine("Employee do");
         //}
+
+        public override void Do()
+        {
+            Console.WriteLine("Employee do"); 
+        }
     }
 
     internal class Admin : Employee
     {
-        public string Department { get; set; } = string.Empty; 
+        public string Department { get; set; } = string.Empty;
+
+        public override void Do()
+        {
+            //base.Do();
+            Console.WriteLine("Admin do"); 
+        }
     }
 }

@@ -5,6 +5,12 @@ namespace BasicOOP2024Q3
     {
         static void Main(string[] args)
         {
+            FirstPart();
+
+        }
+
+        private static void FirstPart()
+        {
             //Person p = new Person();
             //string name = p.Name;
             //if(name != null)
@@ -44,9 +50,14 @@ namespace BasicOOP2024Q3
                admin3
             };
 
-            p.Do();
-            e.Do();
-            a.Do(); 
+            //p.Do();
+            //e.Do();
+            //a.Do();
+            //
+            foreach (var person in people)
+            {
+                person.Do();
+            }
         }
 
         private static void Do(Person person)

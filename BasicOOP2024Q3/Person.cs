@@ -10,7 +10,7 @@ namespace BasicOOP2024Q3
     internal interface IPerson
     {
         string Name { get; set; }
-        void Do(); 
+        void Do();
     }
     internal class Person : IPerson
     {
@@ -28,15 +28,20 @@ namespace BasicOOP2024Q3
     {
         public int Salary { get; set; }
 
-        //public void Do()
+        //public new void Do()
         //{
         //    Console.WriteLine("Employee do");
         //}
 
-        public override void Do()
+        public void Doing()
         {
-            Console.WriteLine("Employee do"); 
+            Console.WriteLine("Employee do");
         }
+
+        //public override void Do()
+        //{
+        //    Console.WriteLine("Employee do"); 
+        //}
     }
 
     internal class Admin : Employee
@@ -46,7 +51,7 @@ namespace BasicOOP2024Q3
         public override void Do()
         {
             //base.Do();
-            Console.WriteLine("Admin do"); 
+            Console.WriteLine("Admin do");
         }
     }
 }

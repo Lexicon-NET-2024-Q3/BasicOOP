@@ -5,8 +5,21 @@ namespace BasicOOP2024Q3
     {
         static void Main(string[] args)
         {
+
+            //Person p = new Person();
+            //Employee e = new Employee();
+            //Admin a = new Admin();
+
+            //p.Do();
+            //e.Doing();
+            //a.Do(); 
+
+
+
             //FirstPart();            
             Vehicle v = new Vehicle("Volvo");
+            //ProtectedBool syns inte
+            //v.ProtectedBool = 
             Console.WriteLine(v.Turn()); 
             Car c = new Car("Saab", "93");
             Console.WriteLine(c.Turn());

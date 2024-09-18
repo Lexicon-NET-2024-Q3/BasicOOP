@@ -6,6 +6,15 @@ namespace BasicOOP2024Q3
         static void Main(string[] args)
         {
 
+            string name = "Kalle";
+            var res = name.AddString("Anka");
+            Console.WriteLine(res);
+
+            string test = "Test";
+            var res2 = test.AddString("test");
+            Console.WriteLine(res2);
+
+
             //Person p = new Person();
             //Employee e = new Employee();
             //Admin a = new Admin();

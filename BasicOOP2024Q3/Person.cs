@@ -16,7 +16,7 @@ namespace BasicOOP2024Q3
     {
         //public string Name { get; set; } = ""; 
         //public string? Name { get; set; } 
-
+       
         public string Name { get; set; } = string.Empty;
 
         public virtual void Do()
@@ -35,6 +35,7 @@ namespace BasicOOP2024Q3
 
         public void Doing()
         {
+            
             Console.WriteLine("Employee do");
         }
 

@@ -7,15 +7,29 @@ using System.Threading.Tasks;
 namespace BasicOOP2024Q3
 {
     internal interface IDrivable
-    {
-        string Drive(int distance); 
+    {        
+        string Drive(int distance);        
     }
     internal interface IStopable
     {
         void Stop(); 
     }
-    internal class Vehicle : IDrivable
+
+    internal abstract class AbstractVehicle : IDrivable
     {
+        //private int Fuel;
+
+        public abstract string Turn();
+        public virtual string Drive(int distance)
+        {
+            return $"{GetType().Name} drove for {distance}"; 
+        }
+
+    }
+
+    internal class Vehicle : AbstractVehicle
+    {
+
         public string Brand { get; set; }
 
         public Vehicle(string brand)
@@ -23,9 +37,9 @@ namespace BasicOOP2024Q3
             Brand = brand; 
         }
 
-        public virtual string Drive(int distance)
+        public override string Turn()
         {
-            return $"{GetType().Name} drove for {distance}"; 
+            return "Turning"; 
         }
     }
 

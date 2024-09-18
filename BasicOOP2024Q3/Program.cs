@@ -5,9 +5,11 @@ namespace BasicOOP2024Q3
     {
         static void Main(string[] args)
         {
-            //FirstPart();
+            //FirstPart();            
             Vehicle v = new Vehicle("Volvo");
+            Console.WriteLine(v.Turn()); 
             Car c = new Car("Saab", "93");
+            Console.WriteLine(c.Turn());
             Saab s = new Saab();
             //Console.WriteLine(v.Drive(50));
             //Console.WriteLine(c.Drive(55));
